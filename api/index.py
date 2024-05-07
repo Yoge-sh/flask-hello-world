@@ -6,6 +6,8 @@ app = Flask(__name__)
 def home():
     if request.method == 'GET':
         return "Hello G!"
+    else:
+        return "Not GET"
     
     # if request.method == 'POST':
     #     user_input = request.get_json()    
