@@ -2,10 +2,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def home():
-    if request.method == 'GET':
-        return "Hello G!"
+    # if request.method == 'GET':
+    return "Hello G!"
     # if request.method == 'POST':
     #     user_input = request.get_json()    
     #     name, age, sex,location, foodpref, wc, activity, history = user_input.values()
@@ -23,7 +23,7 @@ def home():
     #         "Prediction": "high risk"
     #     }
     #     return results
-    return 'This endpoint expects a GET/POST request with user input data in JSON format.'
+    # return 'This endpoint expects a GET/POST request with user input data in JSON format.'
 
 @app.route('/about')
 def about():
