@@ -2,10 +2,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def home():
-    # if request.method == 'GET':
-    return "Hello G!"
+    if request.method == 'GET':
+        return "Hello G!"
+    
     # if request.method == 'POST':
     #     user_input = request.get_json()    
     #     name, age, sex,location, foodpref, wc, activity, history = user_input.values()
